@@ -1,20 +1,10 @@
-'''django2 version'''
-from django.urls import include, path
-from django.contrib import admin
+from django.conf.urls import url
+from . import views
 
-urlpatterns = [
-    path('personalweb/', include('personalweb.urls')),
-    path('admin/', admin.site.urls),
-]
+urlpatterns={
+			url(r'^$', views.index, name='index'),
 
-'''django1 version'''
-from django.conf.urls import url, include
-from django.contrib import admin
+}
 
-
-urlpatterns = [
-	url(r'^personalweb/', include('personalweb.urls')),
-    url(r'^admin/', admin.site.urls),    
-]
 
 
